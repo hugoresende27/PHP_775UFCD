@@ -14,6 +14,10 @@
 
     <div class="negrito">
 
+<!-- 
+    COMENTÁRIO 
+-->
+
     <form action="" method="POST" >
   
         <label for="nome">Nome: </label>
@@ -47,6 +51,9 @@
         echo "<p>HELLO WORLD! </p>".$nome;
 
         //phpinfo();
+        /*
+        COMMENTS MULTI LINHAS
+        */
 
     ?>
 
