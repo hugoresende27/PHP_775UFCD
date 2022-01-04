@@ -18,7 +18,7 @@
     COMENTÁRIO 
 -->
 
-    <form action="" method="POST" >
+    <form action="" method="POST" class="p-5">
   
         <label for="nome">Nome: </label>
         <input type="text" name="nome" id="nome" required="required"/  >
@@ -27,7 +27,7 @@
         <br>
 
         <label for="morada">Morada: </label>
-        <textarea name="morada" id="morada" cols="30" rows="10"></textarea>
+        <textarea name="morada" id="morada" cols="50" rows="3"></textarea>
 
         <br>
         <br>
@@ -42,14 +42,18 @@
         
     </form>
 
-    <a href="pag2.php?id=1">LINKAGEM</a>
+    <a class="p-3" href="pag2.php?id=1">LINKAGEM</a>
             
     <?php 
 
         $nome = "Hugo";
 
-        echo "<p>HELLO WORLD! </p>".$nome;
+        echo "<p class='p-3'>HELLO WORLD! ".$nome."</p>";
 
+        echo "<p class='negrito vermelho p-3'>BEM VINDO AO MEU O'Braley \"SITE\"!</p>";   //"" e '' no interior  \ escape seq char
+
+
+        
         //phpinfo();
         /*
         COMMENTS MULTI LINHAS
