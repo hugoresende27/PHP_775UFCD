@@ -15,6 +15,28 @@
         $e++;
         $f = $e;
         echo $f;
+
+        $x = 20;
+        $z = "20";
+
+        //echo $x++;
+        //echo $x;
+        echo "<br>";
+        print ($x === $z ? "IGUAL":"DIFERENTE");        //tipo de dados e valor igual
+        echo "<br>";
+        print ($x == $z ? "IGUAL":"DIFERENTE");         //valor igual, tipo de dados não interessa
+
+        $a += 5;
+        echo "<br>".$a;
+        $a *= 5;
+        echo "<br>".$a;
+        $a -= 5;
+        echo "<br>".$a;
+
+        $k = "ola";
+        $k .= "mundo ....";
+        $k .= " quem ";
+        echo "<br>".$k;
     ?>
     
 </body>
