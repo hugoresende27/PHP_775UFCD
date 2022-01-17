@@ -22,7 +22,7 @@
     <p>sessão apagada</p>
     <p>Já visitou <?php print_r($_SESSION); ?> vezes as páginas deste site ! </p>
 
-    <a href="sessions.php">voltar para trás</a><br>
+    <p><a href="sessions.php">voltar para trás</a><br></p>
 
 
     
