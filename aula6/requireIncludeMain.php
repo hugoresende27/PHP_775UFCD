@@ -4,6 +4,8 @@
     //require mais usado quando necessita por exemplo de uma ligação a bd obrigatória
     //ambos dão Warning, mas apenas o require dá fatal error e não executa mais código para baixo
 
+    //require_once e include_once apenas vai incluir se ainda não tiver sido incluido
+
 
 
 ?>
@@ -25,7 +27,8 @@
     
         include 'header.php';
         include 'exemplo_Inc.php';
-
+        //require 'exemplo_Inc.php';
+        include 'footer.php';
     ?>
 
 
