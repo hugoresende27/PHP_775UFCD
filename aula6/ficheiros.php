@@ -4,6 +4,7 @@
 //MODO WRITE VAI SEMPRE CRIAR FICHEIRO NOVO
 
     $fileName = "file1.txt";
+    //WRITE "W"
     //$fh = fopen($fileName,"w") or die("ERRO: impossível criar o ficheiro $filename");
 
     $escrever = "Funciona ! está a escrever no ficheiro....".PHP_EOL;
@@ -20,14 +21,14 @@
     echo "<p>Ficheiro criado 3!!!</p>";
     
 
-    //$fh = fopen($fileName,"a") or die("ERRO: impossível abrir e acrescentar o ficheiro $filename");
+    $fh = fopen($fileName,"a") or die("ERRO: impossível abrir e acrescentar o ficheiro $filename");
     $escrever4 = "adicionar conteudo modo 'a' ".PHP_EOL."MAIS um texto 66666666";
-    //fwrite($fh,$escrever4);
+    fwrite($fh,$escrever4);
     echo "<p>Ficheiro acrescentado 3!!!</p>";
 
     $fh = fopen($fileName,"r") or die("ERRO: ler e abrir o ficheiro $filename");
     
-    $teste = fread($fh,999);
+    $teste = fread($fh,filesize($fileName));
     echo "<p>Ficheiro acrescentado 3!!! $teste</p>";
 
 

@@ -1,0 +1,11 @@
+body{
+    font-family: "consolas", sans-serif;
+    background-color: grey;
+    color: darkblue;
+}
+
+.vermelho{
+    font-family: "consolas", sans-serif;
+    background-color: yellow;
+    color: red;
+}
