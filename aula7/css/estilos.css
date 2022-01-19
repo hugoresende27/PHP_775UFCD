@@ -1,5 +1,6 @@
 body{
     font-family: "consolas", sans-serif;
+    font-size: 22px;
     background-color: grey;
     color: darkblue;
 }
@@ -8,4 +9,9 @@ body{
     font-family: "consolas", sans-serif;
     background-color: yellow;
     color: red;
+}
+.negrito{
+    font-family: "consolas", sans-serif;
+    background-color: black;
+    color: white;
 }

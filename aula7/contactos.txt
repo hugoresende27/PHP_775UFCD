@@ -1,0 +1,12 @@
+CONTACTO ::
+nome  hugao
+email  hugoresende27@gmail.com
+telefone  132212312
+genero  F
+
+CONTACTO ::
+nome  hugo emanuel
+email  hugo@asdad.com
+telefone  9999999
+genero  M
+
