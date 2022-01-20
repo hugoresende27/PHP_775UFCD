@@ -97,6 +97,7 @@
             fwrite ($fh,"email  ".$mail. PHP_EOL);
             fwrite ($fh,"telefone  ".$telefone. PHP_EOL);
             fwrite ($fh,"genero  ".$genero. PHP_EOL.PHP_EOL);
+            fwrite ($fh,"Mensagem  ".$mensagem. PHP_EOL.PHP_EOL);
 
             fclose($fh);
             echo "tudo certo !";
