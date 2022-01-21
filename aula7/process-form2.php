@@ -90,6 +90,10 @@
         // VERIFICAÇÃO FINAL SE FORM DEVIDAMENTE PREENCHIDO///////////////////////////////////////////////////////////
         if (!isset($ha_erros)){
             //processamos forms
+            date_default_timezone_set("Europe/Lisbon");
+            $data = date("d-m-Y h:i A");
+
+            //guardar num ficheiro
             $ficheiro = "contactos.txt";
             $fh = fopen($ficheiro, 'a') or die ("Erro não foi possível criar o ficheiro");
             fwrite ($fh,"CONTACTO ::". PHP_EOL);
@@ -98,9 +102,44 @@
             fwrite ($fh,"telefone  ".$telefone. PHP_EOL);
             fwrite ($fh,"genero  ".$genero. PHP_EOL.PHP_EOL);
             fwrite ($fh,"Mensagem  ".$mensagem. PHP_EOL.PHP_EOL);
+            fwrite ($fh,"Data Submissão  ".$data. PHP_EOL.PHP_EOL);
 
             fclose($fh);
-            echo "tudo certo !";
+            echo "Dados submetidos e gravados em ficheiro com Sucesso!";
+
+            //enviar por email
+            //endereço para quem vai o email
+            $endereco = "Hugo Resende <hugoresende27@gmail.com>";
+            $assunto = "[Contacto do site] $nome";
+
+            $headers =  "From: $nome <$mail>".PHP_EOL;
+            $headers .= "Reply-To: $mail".PHP_EOL;
+            $headers .= "MIME-Version: 1.0". PHP_EOL;
+            $headers .= "Content-type: text/html; charset=utf-8". PHP_EOL;
+
+            $msg = "<!DOCTYPE html><html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" /><style type=\"text/css\"> @media only screen and (max-device-width:480px){td[class=w10]{width:10px !important;}td[class=w15]{width:5px!important;}td[class=w30]{width:10px !important;}td[class=w220]{width:80px!important;}td[class=w240]{width:180px !important;}td[class=w280]{width:135px!important;}td[class=w580]{width:280px !important;}table[class=w640], td[class=w640]{width:300px!important;}p[id=footer]{text-align:center!important;}#header h1{font-size:30px !important;}#header,#footer{-webkit-text-size-adjust:80%!important;-ms-text-size-adjust:80% !important;}}#outlook a{padding:0;}body{width:100% !important;}.ReadMsgBody{width:100%;}.ExternalClass{width:100%; display:block !important; }.yshortcuts, .yshortcuts a,.yshortcuts a:link,.yshortcuts a:visited,.yshortcuts a:hover,.yshortcuts a span{color:black; text-decoration:none!important; border-bottom:none!important;background:none !important;}/* Formataçao Geral*/ body{background-color:#FFFFFF;margin:0;padding:0;font-family:'Helvetica Neue',Arial,Helvetica,Geneva,sans-serif;}br,strong br,b br,em br,i br{line-height:100%;}table td,table tr{border-collapse:collapse;}#background-table{background-color:#FFFFFF;}#top-bar{border-radius:6px 6px 0 0; -moz-border-radius:6px 6px 0 0;-webkit-border-radius:6px 6px 0 0; font-weight:bold;} #footer{border-radius:0 0 6px 6px;-moz-border-radius:0 0 6px 6px;-webkit-border-radius:0 0 6px 6px;} #top-bar, #footer{-webkit-font-smoothing:antialiased;background-color:#266297;color:#ededed; text-align:center; -webkit-text-size-adjust:none;-ms-text-size-adjust:none; font-size:12px;}#header{-webkit-text-size-adjust:none;-ms-text-size-adjust:none;}#header h1{line-height:100% !important; -webkit-font-smoothing:antialiased; font-size:36px; text-align:center; margin:15px 0 30px 0; color:#266297}#header p{text-align:left; margin:0 15px; line-height:25px; font-size:14px;}#texto{margin:0 0 15px 0}#texto p{font-weight:400; color:#266297 } #texto span{font-weight:normal; color:#333;}</style></head><body><table id='background-table' border='0' cellpadding='0' cellspacing='0' width='100%'><tbody><tr><td align='center' bgcolor='#FFFFFF'><table class='w640' border='0' cellpadding='0' cellspacing='0' width='640'><tbody><tr><td class='w640' height='20' width='640'></td></tr><tr><td id='top-bar' class='w640' width='640' align='center'><p>Email via website</p></td></tr><tr><td id='header' class='w640' align='center' bgcolor='#ededed' width='640'><h1>Contacto</h1><div id='texto'>";
+
+            $msg .= "<p><strong>Nome: </strong>$nome</p>";
+            $msg .= "<p><strong>Email: </strong>$mail</p>";
+            $msg .= "<p><strong>Telefone: </strong>$telefone</p>";
+            $msg .= "<p><strong>Gênero: </strong>$genero</p>";
+            $msg .= "<p><strong>Msg: </strong>$mensagem</p>";
+
+            $msg .= "Data de envio: $data". PHP_EOL;
+
+            $msg .=  "</div></td></tr><tr><td class='w640' bgcolor='#ededed' height='15' width='640'></td></tr><tr><td id='footer' class='w640'width='640' align='center'><p>Email gerado a: $data</p></td></tr></tbody></table></td></tr><tr><td class='w640' height='20' width='640'></td></tr></tbody></table></body></html>";
+
+          
+
+            if (mail($endereco, $assunto, $msg, $headers)){
+                echo "<h3>Formulário enviado por email com sucesso</h3>";
+            } else {
+                echo "<h3>Formulário NÃO ENVIADO</h3>";
+            }
+
+            //echo "<p><a href ='formularios2.php'>Voltar formulario 2</a></p>";
+
+
         } else {
             //se as vars de erro têm conteúdo temos de voltar a mostrar o form com os dados preenchidos e indicação do erro
             ?>
