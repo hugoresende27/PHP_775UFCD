@@ -51,7 +51,7 @@
         } 
         //verificar se email tem caracteres não permitidos
         elseif (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $_POST['email'])){  // regex usado aqui
-                $erro_mail = "Só são permitidas letras e espaços...";
+                $erro_mail = "Email inválido...";
                 $ha_erros = true;
             }
         else {
@@ -154,43 +154,50 @@
         } else {
             //se as vars de erro têm conteúdo temos de voltar a mostrar o form com os dados preenchidos e indicação do erro
             ?>
-                <form method ="POST" action="process-form2.php">
+                <body style="background-color:rgb(128, 97, 187)">
 
-                <p><label class="negrito" for="nome">NOME: <span class="vermelho">*</span></label>
-                <input type="text" name="nome" id="nome" value="<?= $nome ?>">
-                <?php if (!empty($erro_nome)) {
-                    echo "<span class='vermelho'>$erro_nome</span>";
-                    } ?> </p>
+                <div class="main" style="max-width:750px; margin-left:25%">
 
-                <p><label class="negrito" for="email">EMAIL: <span class="vermelho">*</span></label>
-                <input type="text" name="email" id="email" value="<?= $mail ?>">
-                <?php if (!empty($erro_mail)) {
-                    echo "<span class='vermelho'>$erro_mail</span>";
-                    } ?> </p>
+                <h2>Formulário de contacto</h2>
+                <p>Fale connosco</p> 
+                <p><span class="vermelho">Todos os campos com exepção do telefone são obrigatórios</span></p>
+                    <form method ="POST" action="process-form2.php">
 
-                <p><label class="negrito" for="tel">TELEFONE: </label>
-                <input type="text" name="tel" id="tel" value="<?= $telefone ?>">
-                <?php if (!empty($erro_telefone)) {
-                    echo "<span class='vermelho'>$erro_telefone</span>";
-                    } ?> </p>
+                    <p><label class="negrito" for="nome">NOME: <span class="vermelho">*</span></label>
+                    <input type="text" name="nome" id="nome" value="<?= $nome ?>">
+                    <?php if (!empty($erro_nome)) {
+                        echo "<span class='vermelho'>$erro_nome</span>";
+                        } ?> </p>
 
-                <p><label class="negrito" for="mensagem">Mensagem: <span class="vermelho">*</span></p>
-                <p><textarea name="mensagem" id="mensagem" cols="40" rows="5"><?= $mensagem ?></textarea>
-                <?php if (!empty($erro_mensagem)) {
-                    echo "<span class='vermelho'>$erro_mensagem</span>";
-                    } ?></p>
+                    <p><label class="negrito" for="email">EMAIL: <span class="vermelho">*</span></label>
+                    <input type="text" name="email" id="email" value="<?= $mail ?>">
+                    <?php if (!empty($erro_mail)) {
+                        echo "<span class='vermelho'>$erro_mail</span>";
+                        } ?> </p>
 
-                <p><label class="negrito" for="gen">Gênero: <span class="vermelho">*</span></p>
-                <input type="radio" name="gen" id="masc" value="M" <?php if (isset($genero) && $genero == 'M') echo "checked='checked'";?>  ><label for="masc">&nbsp;Masculino:</label>     
-                <input type="radio" name="gen" id="fem" value ="F" <?php if (isset($genero) && $genero == 'F') echo "checked='checked'";?>  ><label for="fem">&nbsp;Feminino:</label> 
-                <?php if (!empty($erro_genero)) {
-                    echo "<span class='vermelho'>$erro_genero</span>";
-                    } ?>
-                <p><input type="submit" name ="submit" value="Enviar Formulário"></p>
+                    <p><label class="negrito" for="tel">TELEFONE: </label>
+                    <input type="text" name="tel" id="tel" value="<?= $telefone ?>">
+                    <?php if (!empty($erro_telefone)) {
+                        echo "<span class='vermelho'>$erro_telefone</span>";
+                        } ?> </p>
+
+                    <p><label class="negrito" for="mensagem">Mensagem: <span class="vermelho">*</span></p>
+                    <p><textarea name="mensagem" id="mensagem" cols="40" rows="5"><?= $mensagem ?></textarea>
+                    <?php if (!empty($erro_mensagem)) {
+                        echo "<span class='vermelho'>$erro_mensagem</span>";
+                        } ?></p>
+
+                    <p><label class="negrito" for="gen">Gênero: <span class="vermelho">*</span></p>
+                    <input type="radio" name="gen" id="masc" value="M" <?php if (isset($genero) && $genero == 'M') echo "checked='checked'";?>  ><label for="masc">&nbsp;Masculino:</label>     
+                    <input type="radio" name="gen" id="fem" value ="F" <?php if (isset($genero) && $genero == 'F') echo "checked='checked'";?>  ><label for="fem">&nbsp;Feminino:</label> 
+                    <?php if (!empty($erro_genero)) {
+                        echo "<span class='vermelho'>$erro_genero</span>";
+                        } ?>
+                    <p><input type="submit" name ="submit" value="Enviar Formulário"></p>
 
 
-                </form>
-
+                    </form>
+                </div>
             <?php
         }
     } else {

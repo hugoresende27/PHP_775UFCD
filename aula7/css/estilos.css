@@ -1,26 +1,39 @@
-body{
+.main{
     font-family: "consolas", sans-serif;
     font-size: 22px;
     background-color: grey;
     color: darkblue;
+    padding: 20px;
+    border-radius: 5px;
 }
 
 .vermelho{
     font-family: "consolas", sans-serif;
-    background-color: yellow;
+    
     color: red;
 }
 .negrito{
     font-family: "consolas", sans-serif;
-    background-color: black;
-    color: white;
+   
+    color: rgb(17, 17, 17);
 }
 
-.botao{
-   
-    background-color: blue;
-    border-radius: 5px;
-    color: white;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 22px;
+.main a{
+    color: black;
+    font-weight: bolder;
 }
+
+.main a:hover {
+    text-decoration: none;
+    
+}
+
+.main button:hover{
+    background-color: gray;
+}
+
+.caixaFile{
+    background-color: rgb(238, 234, 255);
+}
+
+

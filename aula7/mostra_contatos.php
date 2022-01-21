@@ -13,11 +13,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href ="css/estilos.css"/>
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+ 
     <title>Formularios 1</title>
 </head>
 <body>
+<div class="main">
+<div class="text-center">
+  <button type="button" class="btn btn-warning"><a href="formularios2.php">Voltar</a></button>
+</div>
 
+<div class="text-center">
+  <h1>FICHEIRO</h1>
+</div>
 <?php
 
 //file handler aqui para ler 
@@ -25,7 +33,11 @@ $ficheiro = fopen('contactos.txt', 'r');
 while(!feof($ficheiro)){
     //echo de fgets no file handler
     $temp = fgets($ficheiro); ?>
-    <p ><?=$temp?></p>
+    
+        <div class="caixaFile"  >
+            <p ><?=$temp?></p>
+        </div>
+    
     <?php
 }
 
@@ -36,6 +48,6 @@ fclose($ficheiro);
 
 <a href="formularios2.php" class="botao">Voltar</a>
 
-    
+</div>
 </body>
 </html>

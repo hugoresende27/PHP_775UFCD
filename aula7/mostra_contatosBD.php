@@ -15,23 +15,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href ="css/estilos.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     
     <title>Formularios 1</title>
 </head>
 <body>
-
+<div class="main">
+<div class="text-center">
+  <h1>BASE DE DADOS</h1>
+</div>
 <?php
   include 'connect.php';
-  $records = mysqli_query($liga,"select * from contatos"); // fetch data from database
 
-while($data = mysqli_fetch_array($records))
-{
+  if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+
+ 
+
+  $records = mysqli_query($liga,"SELECT * FROM contatos"); // fetch data from database
 ?>
+ <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">Mensagem</th>
+      <th scope="col">Gênero</th>
+    </tr>
+  </thead>
+<?php
+  while($infos = mysqli_fetch_array($records)){
+?>
+<tbody>
   <tr>
-    <td><?php echo $data['nome']; ?></td>
-    <td><?php echo $data['email']; ?></td>
-    <td><?php echo $data['telefone']; ?></td>
+    <td><?=$infos['nome']  ?></td>
+    <td><?=$infos['email']  ?></td>
+    <td><?=$infos['telefone']  ?></td>
+    <td><?=$infos['mensagem']  ?></td>
+    <td><?=$infos['genero']  ?></td>
   </tr>	
+</tbody>
+  
 <?php
 }
 ?>
@@ -40,10 +67,10 @@ while($data = mysqli_fetch_array($records))
 <?php mysqli_close($liga); // Close connection ?>
 
 
-?>
+<div class="text-center">
+  <button type="button" class="btn btn-warning"><a href="formularios2.php">Voltar</a></button>
+</div>
 
-<a href="formularios2.php" class="botao">Voltar</a>
-
-    
+</div>
 </body>
 </html>
