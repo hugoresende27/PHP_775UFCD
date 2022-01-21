@@ -143,7 +143,9 @@
 
             <?php
         }
-    } 
+    } else {
+        header('location:formularios2.php');
+    }
 
      ?> 
      
