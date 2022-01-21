@@ -37,7 +37,8 @@
         } else {
             $nome = seguranca_dados($_POST['nome']);
             //verificar se nome tem caracteres não permitidos
-            if (!preg_match("/^[a-zA-Z ]*$/", $nome)){       // regex usado aqui, /^[chars]$/
+           // if (!preg_match("/^[a-zA-Z ]*$/", $nome)){       // regex usado aqui, /^[chars]$/
+            if (!preg_match("/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/", $nome)){       
                 $erro_nome = "Só são permitidas letras e espaços...";
                 $ha_erros = true;
             }
@@ -137,7 +138,17 @@
                 echo "<h3>Formulário NÃO ENVIADO</h3>";
             }
 
-            //echo "<p><a href ='formularios2.php'>Voltar formulario 2</a></p>";
+            //guardar na base de dados
+            include 'connect.php';
+            $sql = "INSERT INTO contatos  (nome, email, telefone,  mensagem,  genero) 
+                                 VALUES   ('$nome','$mail','$telefone','$mensagem','$genero')";
+            if (mysqli_query($liga, $sql)){
+                echo "<h3>Dados gravados com sucesso!</h3>";
+            } else {
+                echo "<h3>Erro ".mysqli_error($liga)."</h3>";
+            }
+                
+            
 
 
         } else {
@@ -185,7 +196,9 @@
     } else {
         header('location:formularios2.php');
     }
-
+       if (isset($liga)){
+        mysqli_close($liga);
+       } 
      ?> 
      
 
