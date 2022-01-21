@@ -41,6 +41,7 @@
 </form>
 
 <a href="mostra_contatos.php" class="botao">Mostrar Dados</a>
+<a href="mostra_contatosBD.php" class="botao">Mostrar Dados DB</a>
 
 
     
