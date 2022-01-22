@@ -46,8 +46,8 @@
     </form>
 
     
-    <button type="button" class="btn btn-warning"><a href="mostra_contatos.php" >Mostrar Dados Ficheiro</a></button>
-    <button type="button" class="btn btn-danger"><a href="mostra_contatosBD.php">Mostrar Dados DB</a></button>
+    <a href="mostra_contatos.php" ><button type="button" class="btn btn-warning">Mostrar Dados Ficheiro</button></a>
+    <a href="mostra_contatosBD.php"><button type="button" class="btn btn-danger">Mostrar Dados DB</button></a>
 
 
 

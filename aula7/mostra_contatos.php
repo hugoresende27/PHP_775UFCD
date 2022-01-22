@@ -20,7 +20,7 @@
 <body>
 <div class="main">
 <div class="text-center">
-  <button type="button" class="btn btn-warning"><a href="formularios2.php">Voltar</a></button>
+<a href="formularios2.php"><button type="button" class="btn btn-warning">Voltar</button></a>
 </div>
 
 <div class="text-center">
