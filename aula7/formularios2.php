@@ -35,7 +35,7 @@
         <input type="text" name="tel" id="tel"></p>
 
         <p><label class="negrito" for="mensagem">Mensagem: <span class="vermelho">*</span></p>
-        <p><textarea name="mensagem" id="mensagem" cols="40" rows="5"></textarea></p>
+        <p><textarea name="mensagem" id="mensagem" onkeyup="resizeTextarea('InputTextArea')"></textarea></p>
 
         <p><label class="negrito" for="gen">Gênero: <span class="vermelho">*</span></p>
         <input type="radio" name="gen" id="masc" value="M"><label for="masc">&nbsp;Masculino:</label>     
@@ -53,6 +53,6 @@
 
 </div>
 
-    
+   
 </body>
 </html>

@@ -15,10 +15,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href ="css/estilos.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    
     <title>Form processamento</title>
 </head>
 
-<body>
+<body style="background-color:rgb(128, 97, 187)">
+
+<div class="col-md-4 offset-md-4 main">
     <h1 class="vermelho">A processar o seu form .... </h1>    
 
     <?php
@@ -135,7 +139,7 @@
             if (mail($endereco, $assunto, $msg, $headers)){
                 echo "<h3>Formulário enviado por email com sucesso</h3>";
             } else {
-                echo "<h3>Formulário NÃO ENVIADO</h3>";
+                echo "<h3>Formulário <span class='vermelho'>NÃO ENVIADO</span> por email</h3>";
             }
 
             //guardar na base de dados
@@ -143,9 +147,9 @@
             $sql = "INSERT INTO contatos  (nome, email, telefone,  mensagem,  genero) 
                                  VALUES   ('$nome','$mail','$telefone','$mensagem','$genero')";
             if (mysqli_query($liga, $sql)){
-                echo "<h3>Dados gravados com sucesso!</h3>";
+                echo "<h3>Dados gravados na base de dados com sucesso!</h3>";
             } else {
-                echo "<h3>Erro ".mysqli_error($liga)."</h3>";
+                echo "<h3>Erro ao grava na base de dados: ".mysqli_error($liga)."</h3>";
             }
                 
             
@@ -194,7 +198,8 @@
                         echo "<span class='vermelho'>$erro_genero</span>";
                         } ?>
                     <p><input type="submit" name ="submit" value="Enviar Formulário"></p>
-
+                    <button type="button" class="btn btn-warning"><a href="mostra_contatos.php" >Mostrar Dados Ficheiro</a></button>
+                    <button type="button" class="btn btn-danger"><a href="mostra_contatosBD.php">Mostrar Dados DB</a></button>
 
                     </form>
                 </div>
@@ -208,10 +213,7 @@
        } 
      ?> 
      
-
-
-
-
         <a class ="negrito" href="formularios2.php">Voltar</a>
+    </div>
 </body>
 </html>
