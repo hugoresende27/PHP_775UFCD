@@ -16,7 +16,7 @@
 </head>
 <body style="background-color:rgb(128, 97, 187)">
 
-<div class="col-md-4 offset-md-4 main">
+<div class="col-md-4 offset-md-4 main mt-5">
 
 <h2>Formulário de contacto</h2>
 <p>Fale connosco</p> 

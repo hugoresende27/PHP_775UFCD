@@ -23,8 +23,7 @@
 <body style="background-color:rgb(128, 97, 187)">
 
 <div class="col-md-4 offset-md-4 main">
-    <h1 class="vermelho">A processar o seu form .... </h1>    
-
+ 
     <?php
 
     if (isset($_POST['submit']))  {   //verificar submit, boas praticas
@@ -101,13 +100,12 @@
             //guardar num ficheiro
             $ficheiro = "contactos.txt";
             $fh = fopen($ficheiro, 'a') or die ("Erro não foi possível criar o ficheiro");
-            fwrite ($fh,"CONTACTO ::". PHP_EOL);
-            fwrite ($fh,"nome  ".$nome. PHP_EOL);
-            fwrite ($fh,"email  ".$mail. PHP_EOL);
-            fwrite ($fh,"telefone  ".$telefone. PHP_EOL);
-            fwrite ($fh,"genero  ".$genero. PHP_EOL.PHP_EOL);
-            fwrite ($fh,"Mensagem  ".$mensagem. PHP_EOL.PHP_EOL);
-            fwrite ($fh,"Data Submissão  ".$data. PHP_EOL.PHP_EOL);
+            fwrite ($fh,"nome :: ".$nome. PHP_EOL);
+            fwrite ($fh,"email :: ".$mail. PHP_EOL);
+            fwrite ($fh,"telefone :: ".$telefone. PHP_EOL);
+            fwrite ($fh,"genero :: ".$genero. PHP_EOL.PHP_EOL);
+            fwrite ($fh,"Mensagem :: ".$mensagem. PHP_EOL.PHP_EOL);
+            fwrite ($fh,"Data Submissão :: ".$data. PHP_EOL.PHP_EOL);
 
             fclose($fh);
             echo "Dados submetidos e gravados em ficheiro com Sucesso!";
