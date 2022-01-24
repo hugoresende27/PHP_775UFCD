@@ -5,7 +5,7 @@
     font-family: "consolas", sans-serif;
     font-size: 22px;
     background-color: grey;
-    color: rgb(11, 11, 230);
+    color: black;
     padding: 10px;
     border-radius: 5px;
 }
@@ -36,7 +36,16 @@
 }
 
 .caixaFile{
-    background-color: rgb(7, 7, 7);
+    background-color: rgb(148, 138, 138);
+    width: fit-content;
+    
+}
+
+.table-striped {
+    background-color: darkred;
+    font-family: 'consolas';
+    color: white;
+    cursor: pointer;
 }
 
 textarea {
