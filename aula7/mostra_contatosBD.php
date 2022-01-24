@@ -26,13 +26,13 @@
 </div>
 <?php
   include 'connect.php';
-
+/*
   if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
 
- 
+ */
 
   $records = mysqli_query($liga,"SELECT * FROM contatos"); // fetch data from database
 ?>

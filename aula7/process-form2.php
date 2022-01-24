@@ -20,9 +20,9 @@
     <title>Form processamento</title>
 </head>
 
-<body style="background-color:rgb(128, 97, 187)">
+<body style="background-color: black;">
 
-<div class="col-md-4 offset-md-4 main">
+<div class="col-md-6 offset-md-3 main">
  
     <?php
 
@@ -156,9 +156,7 @@
         } else {
             //se as vars de erro têm conteúdo temos de voltar a mostrar o form com os dados preenchidos e indicação do erro
             ?>
-                <body style="background-color:rgb(128, 97, 187)">
-
-                <div class="main" style="max-width:750px; margin-left:25%">
+              
 
                 <h2>Formulário de contacto</h2>
                 <p>Fale connosco</p> 

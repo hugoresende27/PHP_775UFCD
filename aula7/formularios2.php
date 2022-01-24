@@ -14,9 +14,9 @@
     
     <title>Formularios 2</title>
 </head>
-<body style="background-color:rgb(128, 97, 187)">
+<body style="background-color: black;">
 
-<div class="col-md-4 offset-md-4 main mt-5">
+<div class="col-md-6 offset-md-3 main">
 
 <h2>Formulário de contacto</h2>
 <p>Fale connosco</p> 
@@ -48,6 +48,7 @@
     
     <a href="mostra_contatos.php" ><button type="button" class="btn btn-warning">Mostrar Dados Ficheiro</button></a>
     <a href="mostra_contatosBD.php"><button type="button" class="btn btn-danger">Mostrar Dados DB</button></a>
+    <a href="mostraAula.php"><button type="button" class="btn btn-primary">Mostrar Dados DB em Aula</button></a>
 
 
 

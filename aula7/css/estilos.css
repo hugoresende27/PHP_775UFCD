@@ -1,9 +1,12 @@
+
+
 .main{
+    margin-top: 15px;
     font-family: "consolas", sans-serif;
     font-size: 22px;
     background-color: grey;
-    color: darkblue;
-    padding: 20px;
+    color: rgb(11, 11, 230);
+    padding: 10px;
     border-radius: 5px;
 }
 
@@ -33,7 +36,7 @@
 }
 
 .caixaFile{
-    background-color: rgb(238, 234, 255);
+    background-color: rgb(7, 7, 7);
 }
 
 textarea {
