@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <title>University Website</title>
 </head>
 <body>
@@ -16,7 +17,8 @@
        
         <nav>
             <a href="index.html"><img src="images/logo.png" alt="University Logo"></a>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
+               <i class="fas fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT</a></li>
@@ -25,6 +27,7 @@
                     <li><a href="">CONTACT</a></li>
                 </ul>
             </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
        </nav>
 
        <div class="text-box">
@@ -36,6 +39,48 @@
        </div>
     
     </section>
+
+    <!-- ----------------- COURSE ----------------------------------- -->
+    
+    <section class="course">
+        
+        <h1>Courses We Offer</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>Intermediate</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi libero eligendi repellendus voluptatibus? Quia, consectetur, ea tenetur vero rerum numquam ipsam, eius corrupti dolores ab illo! Ipsum veniam laborum necessitatibus.</p>
+            </div>
+
+            <div class="course-col">
+                <h3>Degree</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi libero eligendi repellendus voluptatibus? Quia, consectetur, ea tenetur vero rerum numquam ipsam, eius corrupti dolores ab illo! Ipsum veniam laborum necessitatibus.</p>
+            </div>
+
+            <div class="course-col">
+                <h3>Post Graduation</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi libero eligendi repellendus voluptatibus? Quia, consectetur, ea tenetur vero rerum numquam ipsam, eius corrupti dolores ab illo! Ipsum veniam laborum necessitatibus.</p>
+            </div>
+            
+        </div>
+
+
+    </section>
+
+   <!-- -------------------- JAVASCRIPT PARA MENU --------------------------------- -->
+    <script>
+        var navLinks = document.getElementById('navLinks');
+
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+
+    </script>
     
 </body>
 </html>

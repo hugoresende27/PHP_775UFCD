@@ -1,0 +1,5 @@
+-- responsividade para ecrãs mais pequenos
+@media(max-width: 700px){
+
+-- conceito mobile first
+@media(min-width: 700px){
