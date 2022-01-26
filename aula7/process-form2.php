@@ -108,7 +108,7 @@
             fwrite ($fh,"Data Submissão :: ".$data. PHP_EOL.PHP_EOL);
 
             fclose($fh);
-            echo "Dados submetidos e gravados em ficheiro com Sucesso!";
+            echo "<h1 style='color:green'>Dados submetidos e gravados em ficheiro com Sucesso!</h1>";
 
             //enviar por email
             //endereço para quem vai o email
@@ -135,7 +135,7 @@
           
 
             if (mail($endereco, $assunto, $msg, $headers)){
-                echo "<h3>Formulário enviado por email com sucesso</h3>";
+                echo "<h3 style='color:green'>Formulário enviado por email com sucesso</h3>";
             } else {
                 echo "<h3>Formulário <span class='vermelho'>NÃO ENVIADO</span> por email</h3>";
             }
@@ -145,7 +145,7 @@
             $sql = "INSERT INTO contatos  (nome, email, telefone,  mensagem,  genero) 
                                  VALUES   ('$nome','$mail','$telefone','$mensagem','$genero')";
             if (mysqli_query($liga, $sql)){
-                echo "<h3>Dados gravados na base de dados com sucesso!</h3>";
+                echo "<h3 style='color:green'>Dados gravados na base de dados com sucesso!</h3>";
             } else {
                 echo "<h3>Erro ao grava na base de dados: ".mysqli_error($liga)."</h3>";
             }
@@ -203,14 +203,14 @@
             <?php
         }
     } else {
-        header('location:formularios2.php');
+        header('location:index.php');
     }
        if (isset($liga)){
         mysqli_close($liga);
        } 
      ?> 
      
-        <a class ="negrito" href="formularios2.php">Voltar</a>
+        <a class ="negrito" href="index.php">Voltar</a>
     </div>
 </body>
 </html>

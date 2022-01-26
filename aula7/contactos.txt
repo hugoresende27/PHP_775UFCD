@@ -43,3 +43,21 @@ Mensagem :: rita in the house !!!
 
 Data Submissão :: 24-01-2022 12:05 PM
 
+nome :: Ritinha
+email :: ritas@hotmail.com
+telefone :: 9192313
+genero :: F
+
+Mensagem :: A rita está aqui também
+
+Data Submissão :: 26-01-2022 02:06 PM
+
+nome :: Manuel
+email :: manel@hitmaol.com
+telefone :: 3456564645
+genero :: M
+
+Mensagem :: Manelito
+
+Data Submissão :: 26-01-2022 02:08 PM
+
