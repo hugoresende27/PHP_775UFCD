@@ -1,13 +1,2 @@
 # PHP_775UFCD
  
-MySQL DB Name				
-epiz_30872356_php775		
-
-MySQL User Name
-epiz_30872356
-
-MySQL pw 
-PwI0cOBP58nui
-
-MySQL Host Name
-sql105.epizy.com
