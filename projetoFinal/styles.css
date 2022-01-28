@@ -6,7 +6,7 @@
     font-family: 'Poppins',sans-serif; 
 }
 
-.header{
+header{
     min-height: 100vh;/*garantir q vai ocupar o ecrã todo em height*/
     width: 100%;
     background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4, 9, 30, 0.7)), url('images/banner.png') ;
@@ -99,7 +99,7 @@ nav .fas{
     display: none;
 }
 
-/*---------- Course ------------------*/
+/*---------- COURSES ------------------*/
 .course{
     width: 80%;
     margin: auto;
@@ -115,7 +115,7 @@ h1{
 p{
     color : #777;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 22px;
     padding: 10px;
 }
@@ -128,14 +128,206 @@ p{
 
 .course-col{
     flex-basis: 31%;
-    background-color: #dbb6b6;
+    background-color: #fff3f3;
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
 }
 
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.course-col:hover{
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+    transition: 0.5s;
+}
+
+/*---------- CAMPUS ------------------*/
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;   /*para esconder o que sobra da imagem*/
+}
+
+.campus-col img{
+    width: 100%;
+    display: block;
+}
+
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background: rgba(226,0,0,0.7);
+   
+}
+
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);/*centrar elemento em relação a X*/
+    opacity: 0;/*invisivel*/
+    transition: 0.5s;
+}
+
+.layer:hover h3{
+    position: absolute;
+    bottom: 49%;
+    opacity: 1;/*rato hover aparece e transição para o meio*/
+}
+
+/*---------- FACILITIES ------------------*/
+.facilities {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px
+}
+
+.facilities-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;  
+}
+
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.facilities-col p{
+    padding: 0;
+}
+.facilities-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/*---------- TESTIMONIALS ------------------*/
+
+.testimonials {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px
+}
+
+.testimonial-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.testimonial-col{   
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;  
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+
+.testimonial-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+
+.testimonial-col .fas,.far{
+    color: #f44336;
+}
+
+/*---------- CALL TO ACTION ------------------*/
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius:10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cta h1{
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+/*---------- FOOTER ------------------*/
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+}
+
+footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.icons .fab{
+    font-size: 25px;
+    color:#f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+.fa-project-diagram {
+    color: #f44336;
+}
+
+/*///////////////////////////////////////////////*/
 @media(max-width: 700px){
+
+    .cta h1{
+        font-size: 24px;
+    }
+    
+    .testimonial-col img{     
+        margin-left: 0;
+        margin-right: 15px;    
+    }
+
+    .row{
+    
+        flex-direction: column;/*em mobile as caixas ficam em coluna*/
+    }
+
+
     .text-box h1 {
         font-size: 20px;
     }
@@ -170,4 +362,5 @@ p{
     .nav-links ul {
         padding: 30px;
     }
+
 }
