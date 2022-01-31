@@ -1,32 +1,38 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400&display=swap');
+
+*{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins',sans-serif; 
+    overflow-x: hidden;
 }
 
-header {
-    min-height: 100vh;
+
+
+
+.header{
+    min-height: 100vh;/*garantir q vai ocupar o ecrã todo em height*/
     width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/banner.png);
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4, 9, 30, 0.7)), url('images/banner.png') ;
     background-position: center;
     background-size: cover;
-    position: relative;
+    position: relative;/*PARA TER EM CONTA O PAI*/
 }
 
-nav {
+
+nav{
     display: flex;
     padding: 2% 6%;
     justify-content: space-between;
     align-items: center;
-
 }
 
-nav img {
+nav img{
     width: 150px;
 }
 
-.nav-links {
-    flex: 1;
+.nav-links{
+    flex:1;
     text-align: right;
 }
 
@@ -43,25 +49,25 @@ nav img {
     font-size: 13px;
 }
 
-.nav-links ul li::after {
-    content: '';
-    width: 0%;
+.nav-links ul li::after{/*elemento after para criar uma linha que depois vai levar uma animação*/
+    content: '';/*etiqueta obrigatória*/
+    width: 0%;  /*linha escondida*/
     height: 2px;
     background: #f44336;
     display: block;
     margin: auto;
-    transition: 0.5s;
+    transition: 0.5s;/*efeito transição*/
 }
 
-.nav-links ul li:hover::after {
-    width: 100%;
+.nav-links ul li:hover::after{
+    width: 100%;/*hover::after passa a 100%*/
 }
 
-.text-box {
+.text-box{
     width: 90%;
     color: #fff;
     position: absolute;
-    top: 50%;
+    top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -70,17 +76,16 @@ nav img {
 .text-box h1 {
     font-size: 62px;
 }
-
-.text-box p {
-    margin: 10px 0 40px;
-    font-size: 14px;
+.text-box p{
+    margin:10px 0 40px;
+    font:14px;
     color: #fff;
 }
 
-.hero-btn {
-    color: #fff;
+.hero-btn{
+    color:#fff;
     text-decoration: none;
-    display: inline-block;
+    display: inline-block;/*ficar em linha com elemento div*/
     border: 1px solid #fff;
     padding: 12px 34px;
     font-size: 13px;
@@ -89,127 +94,86 @@ nav img {
     cursor: pointer;
 }
 
-.hero-btn:hover {
+.hero-btn:hover{
     border: 1px solid #f44336;
     background: #f44336;
     transition: 1s;
 }
 
-nav .fas {
+nav .fas{
     display: none;
 }
 
-@media(max-width: 700px) {
-    .text-box h1 {
-        font-size: 20px;
-    }
-
-    .nav-links ul li {
-        display: block;
-    }
-
-    .nav-links {
-        position: absolute;
-        background: #f44336;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 1s;
-    }
-
-    nav .fas {
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
-
-    .nav-links ul {
-        padding: 30px;
-    }
-}
-
-
-/* Course */
-.course {
+/*---------- COURSES ------------------*/
+.course{
     width: 80%;
     margin: auto;
     text-align: center;
     padding-top: 100px;
 }
 
-h2 {
+h1{
     font-size: 36px;
     font-weight: 600;
 }
 
-p {
-    color: #777;
+p{
+    color : #777;
     font-size: 14px;
     font-weight: 300;
     line-height: 22px;
     padding: 10px;
 }
 
-.row {
+.row{
     margin-top: 5%;
-    display: flex;
-    justify-content: space-between;
+    display: flex;/*coloca os elementos distribuidos uniformemente em colunas iguais*/
+    justify-content: space-between;/*espaço igual entre eles*/
 }
 
-.course-col {
+.course-col{
     flex-basis: 31%;
-    background: #fff3f3;
+    background-color: #fff3f3;
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
-    transition: 0.5s;
 }
 
-h3 {
+
+h3{
     text-align: center;
     font-weight: 600;
     margin: 10px 0;
 }
 
-.course-col:hover {
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+.course-col:hover{
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+    transition: 0.5s;
 }
 
-@media(max-width: 700px) {
-    .row {
-        flex-direction: column;
-    }
-}
-
-
-/* Campus */
-.campus {
+/*---------- CAMPUS ------------------*/
+.campus{
     width: 80%;
     margin: auto;
     text-align: center;
     padding-top: 50px;
 }
 
-.campus-col {
+.campus-col{
     flex-basis: 32%;
     border-radius: 10px;
     margin-bottom: 30px;
     position: relative;
-    overflow: hidden;
+    overflow: hidden;   /*para esconder o que sobra da imagem*/
 }
 
-.campus-col img {
+.campus-col img{
     width: 100%;
     display: block;
 }
 
-.layer {
+.layer{
     background: transparent;
     height: 100%;
     width: 100%;
@@ -219,11 +183,12 @@ h3 {
     transition: 0.5s;
 }
 
-.layer:hover {
-    background: rgba(226, 0, 0, 0.7);
+.layer:hover{
+    background: rgba(226,0,0,0.7);
+   
 }
 
-.layer h3 {
+.layer h3{
     width: 100%;
     font-weight: 500;
     color: #fff;
@@ -231,137 +196,125 @@ h3 {
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
+    transform: translateX(-50%);/*centrar elemento em relação a X*/
+    opacity: 0;/*invisivel*/
     transition: 0.5s;
 }
 
-.layer:hover h3 {
+.layer:hover h3{
+    position: absolute;
     bottom: 49%;
-    opacity: 1;
+    opacity: 1;/*rato hover aparece e transição para o meio*/
 }
 
-/* Facilities */
+/*---------- FACILITIES ------------------*/
 .facilities {
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 100px
 }
 
-.facilities-col {
+.facilities-col{
     flex-basis: 31%;
     border-radius: 10px;
     margin-bottom: 5%;
-    text-align: left;
+    text-align: left;  
 }
 
-.facilities-col img {
+.facilities-col img{
     width: 100%;
     border-radius: 10px;
 }
 
-.facilities-col p {
+.facilities-col p{
     padding: 0;
 }
-
-.facilities-col h3 {
+.facilities-col h3{
     margin-top: 16px;
     margin-bottom: 15px;
     text-align: left;
 }
 
-/* Testimonials */
+/*---------- TESTIMONIALS ------------------*/
+
 .testimonials {
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 100px
 }
 
-.testimonial-col {
-    flex-basis: 44%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-    background: #fff3f3;
-    padding: 25px;
-    cursor: pointer;
-    display: flex;
-}
-
-.testimonial-col img {
+.testimonial-col img{
     height: 40px;
     margin-left: 5px;
     margin-right: 30px;
     border-radius: 50%;
 }
 
-.testimonial-col h3 {
+.testimonial-col{   
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;  
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+
+.testimonial-col h3{
     margin-top: 15px;
     text-align: left;
 }
 
-.testimonial-col .fas, .far {
+.testimonial-col .fas,.far{
     color: #f44336;
 }
 
-@media(max-width: 700px) {
-    .testimonial-col img {
-        margin-left: 0;
-        margin-right: 15px;
-    }
-}
-
-
-/* Call to Action */
-.cta {
+/*---------- CALL TO ACTION ------------------*/
+.cta{
     margin: 100px auto;
     width: 80%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/banner2.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/banner2.jpg);
     background-position: center;
     background-size: cover;
-    border-radius: 10px;
+    border-radius:10px;
     text-align: center;
     padding: 100px 0;
 }
 
-.cta h2 {
+.cta h1{
     color: #fff;
     margin-bottom: 40px;
     padding: 0;
 }
 
-@media(max-width: 700px) {
-    .cta h2 {
-        font-size: 24px;
-    }
-}
-
-
-/* Footer */
-footer {
+/*---------- FOOTER ------------------*/
+footer{
     width: 100%;
     text-align: center;
-    padding: 30px 0;
+    padding: 30px;
 }
 
-footer h4 {
+footer h4{
     margin-bottom: 25px;
     margin-top: 20px;
     font-weight: 600;
 }
 
-.icons .fab {
-    color: #f44336;
+.icons .fab{
+    font-size: 25px;
+    color:#f44336;
     margin: 0 13px;
     cursor: pointer;
     padding: 18px 0;
 }
 
-.fa-heart {
+.fa-project-diagram {
     color: #f44336;
 }
+
 
 /*///////////////////////////////// ABOUT US PAGE //////////////////*/
 .sub-header{
@@ -373,7 +326,6 @@ footer h4 {
     text-align: center;
     color: #fff;
 }
-
 
 .sub-header h1{
     margin-top: 100px;
@@ -395,8 +347,9 @@ footer h4 {
     width: 100%;
 }
 
-.about-col h1 {
+.about-col h2 {
     padding-top: 0;
+    font-size: 24px;
 }
 
 .about-col p{
@@ -411,4 +364,59 @@ footer h4 {
 
 .red-btn:hover{
     color: #fff;
+}
+
+/*/////////////////////////MEDIA QUERYS //////////////////////*/
+@media(max-width: 700px){
+
+    .cta h1{
+        font-size: 24px;
+    }
+    
+    .testimonial-col img{     
+        margin-left: 0;
+        margin-right: 15px;    
+    }
+
+    .row{
+    
+        flex-direction: column;/*em mobile as caixas ficam em coluna*/
+    }
+
+
+    .text-box h1 {
+        font-size: 20px;
+    }
+
+    
+    .nav-links ul li {
+       
+        display: block;
+      
+    }
+
+    .nav-links{
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index:2;/*profundidade em css*/
+        transition: 1s;
+    }
+
+    nav .fas{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 30px;
+    }
+
 }
