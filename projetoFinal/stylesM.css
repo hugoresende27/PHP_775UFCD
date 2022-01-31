@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins',sans-serif; 
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 
@@ -138,6 +138,7 @@ p{
     margin-bottom: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
+    transition: 0.5s;
 }
 
 
@@ -294,7 +295,7 @@ h3{
 footer{
     width: 100%;
     text-align: center;
-    padding: 30px;
+    padding: 30px 0;
 }
 
 footer h4{
@@ -304,7 +305,7 @@ footer h4{
 }
 
 .icons .fab{
-    font-size: 25px;
+    /* font-size: 25px; */
     color:#f44336;
     margin: 0 13px;
     cursor: pointer;
@@ -366,8 +367,80 @@ footer h4{
     color: #fff;
 }
 
+/*/////////////////////////////////BLOG CONTENT //////////////////*/
+.blog-content{
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+}
+
+.blog-left{
+    flex-basis: 65%;
+}
+.blog-left img{
+    width: 100%;
+}
+.blog-left h2{
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+    /* font-size: 24px; */
+}
+.blog-left p{
+    color: #999;
+    padding: 0;
+}
+
+.blog-right{
+    flex-basis: 32%;
+}
+.blog-right h3{
+    color: #fff;
+    background: #f44336;
+    padding: 7px 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+.blog-right div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #555;
+    padding: 8px;
+    box-sizing: border-box;
+}
+/*/////////////////////////COMMENT BOX//////////////////////*/
+.comment-box{
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+}
+.comment-box h3{
+    text-align: center;
+}
+.comment-form input, .comment-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+    border-radius: 10px;
+    resize: vertical;
+}
+.comment-form button{
+    margin: 10px 0;
+}
+
+
 /*/////////////////////////MEDIA QUERYS //////////////////////*/
 @media(max-width: 700px){
+    .sub-header h1{
+        font-size: 24px;
+    }
+
 
     .cta h1{
         font-size: 24px;
@@ -418,5 +491,6 @@ footer h4{
     .nav-links ul {
         padding: 30px;
     }
+
 
 }
