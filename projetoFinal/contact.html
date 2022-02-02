@@ -15,7 +15,7 @@
 <body>
 
     <header class="sub-header">
-       
+         <!-- -------------------- HEADER --------------------------------- -->
         <nav>
             <a href="index.html"><img src="images/logo.png" alt="University Logo"></a>
             <div class="nav-links" id="navLinks">
@@ -36,24 +36,61 @@
     
     </header>
 
- 
-        <!-- About us Content -->
-        <section class="about-us">
-            <div class="row">
-
-                <div class="about-col">
-                    <h2>We are the World's largest University</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam laboriosam maxime nam sint earum
-                        voluptatem necessitatibus deserunt eius modi eos, ducimus illo aliquid consequuntur quae similique.
-                        Sed et ipsa esse?</p>
-                        <a href="" class="hero-btn red-btn">EXPLORE NOW</a>
-                </div>
     
-                <div class="about-col">
-                    <img src="images/about.jpg" alt="About us">
+  <!-- -------------------- CONTACTU US --------------------------------- -->
+    <div class="location">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.5434206628!2d-8.83262528508165!3d40.19697337690006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x71ef7dcbad75460a!2zNDDCsDExJzQ5LjEiTiA4wrA0OSc0OS42Ilc!5e0!3m2!1sen!2spt!4v1643811504852!5m2!1sen!2spt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+    </div>
+
+    <section class="contact-us">
+        <div class="row">
+
+            <div class="contact-col">
+
+                <div>
+                    <i class="fas fa-home"></i>
+                    <span>
+                        <h5>XYZ Road, ABC Building</h5>
+                        <p>Michigan, USA</p>
+                    </span>
                 </div>
+       
+                <div>              
+                    <i class="fas fa-phone"></i>
+                    <span>
+                        <h5>+1 0123456789</h5>
+                        <p>Monday to Saturday, 10AM to 6PM</p>
+                    </span>
+                </div>
+                <div>    
+
+                    <i class="far fa-envelope"></i>
+                    <span>
+                        <h5>info@university.com</h5>
+                        <p>Email us your Query</p>
+                    </span>
+                </div>
+
             </div>
-        </section>
+
+            <div class="contact-col">
+                
+                <form action="form-handler.php" method="POST">
+                    <input type="text" name="nome" id="" placeholder="Enter your name" required />
+                    <input type="email" name="mail" id="" placeholder="Enter your email address" required />
+                    <input type="text" name="sub" id="" placeholder="Enter your subject" required />
+                    <textarea name="msg" id="" rows="8" placeholder="Message" required="required" ></textarea>
+                    <button class="hero-btn red-btn">Send Message</button>
+                </form>
+
+
+            </div>
+
+        </div>
+    </section>
+  
 
     
 

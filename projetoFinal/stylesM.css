@@ -433,10 +433,60 @@ footer h4{
 .comment-form button{
     margin: 10px 0;
 }
-
-
+/*/////////////////////////CONTACT US//////////////////////*/
+.location {
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+.location iframe{
+    width: 100%;
+}
+.contact-us{
+    width: 80%;
+    margin: auto;
+}
+.contact-col{
+    
+    flex-basis:  48%;
+    margin-bottom: 30px;
+}
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.contact-col div .fas,.far {
+    font-size: 28px;
+    color: #f44336;
+    margin: 10px 30px 10px 10px;
+}
+.contact-col div p{
+    font-family: 'Consolas',sans-serif; 
+    padding: 0;
+}
+.contact-col div h5{
+    font-family: 'Consolas',sans-serif; 
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+.contact-col input, textarea{
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    outline: none;
+    border: 1px solid #ccc;
+    resize: vertical;
+    box-sizing: border-box;
+}
 /*/////////////////////////MEDIA QUERYS //////////////////////*/
 @media(max-width: 700px){
+
+    .contact-col form{
+        text-align: center;
+    }
     .sub-header h1{
         font-size: 24px;
     }
@@ -469,7 +519,7 @@ footer h4{
     }
 
     .nav-links{
-        position: absolute;
+        position: fixed;
         background: #f44336;
         height: 100vh;
         width: 200px;
