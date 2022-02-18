@@ -20,7 +20,11 @@ include_once("connect.php");
       
         //user autenticado
         $_SESSION['username'] = $nome;
-        header ('location: sucesso.php?user=ok');
+        $sql = "SELECT nome FROM utilizadores WHERE nome = '$nome'";
+
+        $res = mysqli_query($liga, $sql);
+        echo $res;
+        // header ('location: sucesso.php?user=ok');
     } else {
        //user falhou
         header ('location: login.php?user=ko');
