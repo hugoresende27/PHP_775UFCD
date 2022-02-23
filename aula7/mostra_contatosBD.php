@@ -35,15 +35,21 @@
  */
 
   $records = mysqli_query($liga,"SELECT * FROM contatos"); // fetch data from database
+  if(isset($_GET['Msg'])){
+    echo '<h1>'.$_GET['Msg'].'</h1>';
+}
 ?>
  <table class="table table-dark">
   <thead>
     <tr>
+      <th scope="col">ID</th>
       <th scope="col">Nome</th>
       <th scope="col">Email</th>
       <th scope="col">Telefone</th>
       <th scope="col">Mensagem</th>
       <th scope="col">Gênero</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Apagar</th>
     </tr>
   </thead>
 <?php
@@ -51,11 +57,15 @@
 ?>
 <tbody>
   <tr>
+    <td><?=$infos['id']  ?></td>
     <td><?=$infos['nome']  ?></td>
     <td><?=$infos['email']  ?></td>
     <td><?=$infos['telefone']  ?></td>
     <td><?=$infos['mensagem']  ?></td>
     <td><?=$infos['genero']  ?></td>
+    <td><a href="editar.php?id=<?php echo $infos["id"]; ?>">Delete</a></td>
+    <td><a href="delete.php?id=<?php echo $infos["id"]; ?>" onclick="return confirm('Tem a certeza?')" >Delete</a></td>
+	
   </tr>	
 </tbody>
   
