@@ -25,11 +25,11 @@ if($_POST){
             $headers = "Reply-To: $visitor_email\r\n";
 
             mail($to, $email_subject, $email_body, $headers);
-
-            header("Location: contact.html");
+            var_dump($headers);
+            // header("Location: contact.html");
 
         }
-        header("location:index.html");
+        // header("location:index.html");
     }
    
 
